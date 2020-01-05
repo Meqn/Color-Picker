@@ -1,0 +1,219 @@
+<!-- 来自：https://colorsupplyyy.com/app -->
+<!-- https://danieltriendl.com/ -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telphone=no">
+<title>快速取色/配色工具</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"> </script> -->
+<script src="//cdn.jsdelivr.net/npm/snapsvg@0.5.1/dist/snap.svg.min.js"></script>
+
+<link rel="stylesheet" media="all" href="./assets/application.css">
+<script src="./assets/application.js"></script>  
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<style>
+.flushright,
+.app_container .bottom_sq div.color_squares,
+.app_container .gradients .gradient_circles{
+  display: flex;
+}
+.app_container .bottom-square{
+  flex: 1;
+}
+</style>
+</head>
+<body id="main_index" class="show">
+
+  <div class="app_container" id="main_app">
+    <section class="section colorwheel show">
+      <div class="container load_fading" style="opacity: 1;">
+        <div class="canvas_wrap">
+          <div class="color_picker">
+            <div id="selected_colorwheels" style="display: none">
+            </div>
+            <img class="color_picker_arrow right" alt="arrow-right" src="./assets/arrow_right.png">
+            <img class="color_picker_arrow left" alt="arrow-left" src="./assets/arrow_left.png">
+            <div id="color_picker_label" class="color_picker_label">Complementary</div>
+            <div id="canvas_container">
+              <div class="col-xs-12">
+                <svg id="svg_layout" version="1.1" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="437" height="437" viewBox="0 0 437 437" enable-background="new 0 0 437 437" xml:space="preserve" style="transform: translate(0px, 0px) rotate(0rad) skewX(0rad) scale(1, 1);">
+                  <defs>
+                    <clippath id="rect_clipPath">
+                      <rect x="0" y="0" width="437" height="437"></rect>
+                    </clippath>
+  
+                    <pattern id="grid_patt" width="24" height="24" patternUnits="userSpaceOnUse">
+                      <rect x="0" y="0" width="24" height="24" stroke="grey" stroke-width="0.5" fill="none"></rect>
+                    </pattern>
+                  </defs>
+  
+                  <g id="colorwheel" class="colors_2">
+                  <g><path d="M160.83779151138884,7.393687266624113 A217,217 0 0,1 273.16220848861116,7.393687266624113 L242.8812020684844,120.40722915512632 A100,100 0 0,0 191.1187979315156,120.40722915512632 L160.83779151138884,7.393687266624113 Z" stroke="#f14531" fill="#f14531" style="fill-opacity: 1; stroke-width: 0;"></path><path d="M273.16220848861116,7.393687266624113 A217,217 0 0,1 370.4388238920841,63.55448093015548 L287.70913543414014,146.2877792304864 A100,100 0 0,0 242.8812020684844,120.40722915512632 L273.16220848861116,7.393687266624113 Z" stroke="#fd7c46" fill="#fd7c46" style="fill-opacity: 1; stroke-width: 0;"></path><path d="M370.4388238920841,63.55448093015548 A217,217 0 0,1 426.6038619952129,160.8286457641288 L313.5916414724484,191.11458330144183 A100,100 0 0,0 287.70913543414014,146.2877792304864 L370.4388238920841,63.55448093015548 Z" stroke="#fea143" fill="#fea143" style="fill-opacity: 1; stroke-width: 0;"></path><path d="M426.6038619952129,160.8286457641288 A217,217 0 0,1 426.6087630724779,273.15306263442625 L313.59390003339996,242.8769873891365 A100,100 0 0,0 313.5916414724484,191.11458330144183 L426.6038619952129,160.8286457641288 Z" stroke="#ffca3b" fill="#ffca3b" style="fill-opacity: 1; stroke-width: 0;"></path><path d="M426.6087630724779,273.15306263442625 A217,217 0 0,1 370.45221395546633,370.4321284221977 L287.715305970261,287.7060499641464 A100,100 0 0,0 313.59390003339996,242.8769873891365 L426.6087630724779,273.15306263442625 Z" stroke="#fff846" fill="#fff846" style="fill-opacity: 1; stroke-width: 0;"></path><path d="M370.45221395546633,370.4321284221977 A217,217 0 0,1 273.18049987618895,426.6014108579938 L242.88963127934974,313.59051191612616 A100,100 0 0,0 287.715305970261,287.7060499641464 L370.45221395546633,370.4321284221977 Z" stroke="#76bd37" fill="#76bd37" style="fill-opacity: 1; stroke-width: 0;"></path><path d="M273.18049987618895,426.6014108579938 A217,217 0 0,1 160.85608332666624,426.61121301251455 L191.12722733947754,313.59502903802513 A100,100 0 0,0 242.88963127934974,313.59051191612616 L273.18049987618895,426.6014108579938 Z" stroke="#00973d" fill="#00973d" style="fill-opacity: 1; stroke-width: 0;"></path><path d="M160.85608332666624,426.61121301251455 A217,217 0 0,1 63.57456733980166,370.45890854893673 L146.2970356404616,287.7183910363764 A100,100 0 0,0 191.12722733947754,313.59502903802513 L160.85608332666624,426.61121301251455 Z" stroke="#00a29b" fill="#00a29b" style="fill-opacity: 1; stroke-width: 0;"></path><path d="M63.57456733980166,370.45890854893673 A217,217 0 0,1 7.401040678276786,273.189645409547 L120.41061782409069,242.89384581085116 A100,100 0 0,0 146.2970356404616,287.7183910363764 L63.57456733980166,370.45890854893673 Z" stroke="#006cbf" fill="#006cbf" style="fill-opacity: 1; stroke-width: 0;"></path><path d="M7.401040678276786,273.189645409547 A217,217 0 0,1 7.386337446519008,160.86522939464876 L120.403842141253,191.13144211734965 A100,100 0 0,0 120.41061782409069,242.89384581085116 L7.401040678276786,273.189645409547 Z" stroke="#0f339a" fill="#0f339a" style="fill-opacity: 1; stroke-width: 0;"></path><path d="M7.386337446519008,160.86522939464876 A217,217 0 0,1 63.53439714975681,63.58126339390148 L146.278524032146,146.3001213796781 A100,100 0 0,0 120.403842141253,191.13144211734965 L7.386337446519008,160.86522939464876 Z" stroke="#602386" fill="#602386" style="fill-opacity: 1; stroke-width: 0;"></path><path d="M63.53439714975681,63.58126339390148 A217,217 0 0,1 160.8012091640723,7.40349261359421 L191.10193970694576,120.4117477482001 A100,100 0 0,0 146.278524032146,146.3001213796781 L63.53439714975681,63.58126339390148 Z" stroke="#b7338e" fill="#b7338e" style="fill-opacity: 1; stroke-width: 0;"></path></g><g><path d="M160.83779151138884,7.393687266624113 A217,217 0 0,1 273.16220848861116,7.393687266624113 L242.8812020684844,120.40722915512632 A100,100 0 0,0 191.1187979315156,120.40722915512632 L160.83779151138884,7.393687266624113 Z" stroke="#f14531" fill="#f14531" style="fill-opacity: 1; stroke-width: 0;"></path><path d="M273.16220848861116,7.393687266624113 A217,217 0 0,1 370.4388238920841,63.55448093015548 L287.70913543414014,146.2877792304864 A100,100 0 0,0 242.8812020684844,120.40722915512632 L273.16220848861116,7.393687266624113 Z" stroke="#fd7c46" fill="#fd7c46" style="fill-opacity: 1; stroke-width: 0;"></path><path d="M370.4388238920841,63.55448093015548 A217,217 0 0,1 426.6038619952129,160.8286457641288 L313.5916414724484,191.11458330144183 A100,100 0 0,0 287.70913543414014,146.2877792304864 L370.4388238920841,63.55448093015548 Z" stroke="#fea143" fill="#fea143" style="fill-opacity: 1; stroke-width: 0;"></path><path d="M426.6038619952129,160.8286457641288 A217,217 0 0,1 426.6087630724779,273.15306263442625 L313.59390003339996,242.8769873891365 A100,100 0 0,0 313.5916414724484,191.11458330144183 L426.6038619952129,160.8286457641288 Z" stroke="#ffca3b" fill="#ffca3b" style="fill-opacity: 1; stroke-width: 0;"></path><path d="M426.6087630724779,273.15306263442625 A217,217 0 0,1 370.45221395546633,370.4321284221977 L287.715305970261,287.7060499641464 A100,100 0 0,0 313.59390003339996,242.8769873891365 L426.6087630724779,273.15306263442625 Z" stroke="#fff846" fill="#fff846" style="fill-opacity: 1; stroke-width: 0;"></path><path d="M370.45221395546633,370.4321284221977 A217,217 0 0,1 273.18049987618895,426.6014108579938 L242.88963127934974,313.59051191612616 A100,100 0 0,0 287.715305970261,287.7060499641464 L370.45221395546633,370.4321284221977 Z" stroke="#76bd37" fill="#76bd37" style="fill-opacity: 1; stroke-width: 0;"></path><path d="M273.18049987618895,426.6014108579938 A217,217 0 0,1 160.85608332666624,426.61121301251455 L191.12722733947754,313.59502903802513 A100,100 0 0,0 242.88963127934974,313.59051191612616 L273.18049987618895,426.6014108579938 Z" stroke="#00973d" fill="#00973d" style="fill-opacity: 1; stroke-width: 0;"></path><path d="M160.85608332666624,426.61121301251455 A217,217 0 0,1 63.57456733980166,370.45890854893673 L146.2970356404616,287.7183910363764 A100,100 0 0,0 191.12722733947754,313.59502903802513 L160.85608332666624,426.61121301251455 Z" stroke="#00a29b" fill="#00a29b" style="fill-opacity: 1; stroke-width: 0;"></path><path d="M63.57456733980166,370.45890854893673 A217,217 0 0,1 7.401040678276786,273.189645409547 L120.41061782409069,242.89384581085116 A100,100 0 0,0 146.2970356404616,287.7183910363764 L63.57456733980166,370.45890854893673 Z" stroke="#006cbf" fill="#006cbf" style="fill-opacity: 1; stroke-width: 0;"></path><path d="M7.401040678276786,273.189645409547 A217,217 0 0,1 7.386337446519008,160.86522939464876 L120.403842141253,191.13144211734965 A100,100 0 0,0 120.41061782409069,242.89384581085116 L7.401040678276786,273.189645409547 Z" stroke="#0f339a" fill="#0f339a" style="fill-opacity: 1; stroke-width: 0;"></path><path d="M7.386337446519008,160.86522939464876 A217,217 0 0,1 63.53439714975681,63.58126339390148 L146.278524032146,146.3001213796781 A100,100 0 0,0 120.403842141253,191.13144211734965 L7.386337446519008,160.86522939464876 Z" stroke="#602386" fill="#602386" style="fill-opacity: 1; stroke-width: 0;"></path><path d="M63.53439714975681,63.58126339390148 A217,217 0 0,1 160.8012091640723,7.40349261359421 L191.10193970694576,120.4117477482001 A100,100 0 0,0 146.278524032146,146.3001213796781 L63.53439714975681,63.58126339390148 Z" stroke="#b7338e" fill="#b7338e" style="fill-opacity: 1; stroke-width: 0;"></path></g></g>
+  
+                  <!--rect id="grid_tile" width="480" height="300" y="0" x="0" fill="url(#grid_patt)" opacity="0.2"/ -->
+                  
+                  <g id="rotate">
+                    <g id="default" class="colortheory" transform="translate(-87,-178)" style="display: none;">
+                      <line fill="none" stroke="#221F1F" stroke-width="2" stroke-miterlimit="10" x1="305.334" y1="253.737" x2="305.334" y2="400"></line>
+                      <circle fill="none" stroke="#221F1F" stroke-width="2" stroke-miterlimit="10" cx="305.243" cy="237.242" r="16.051"></circle>
+                    </g>
+  
+                    <g id="split" class="colortheory" transform="translate(-87,-178)" style="display: block;">
+                      <line fill="none" stroke="#221F1F" stroke-width="2" stroke-miterlimit="10" x1="305.334" y1="253.737" x2="305.334" y2="540.475"></line>
+                      <circle fill="none" stroke="#221F1F" stroke-width="2" stroke-miterlimit="10" cx="305.243" cy="237.242" r="16.051"></circle>
+                      <circle fill="none" stroke="#221F1F" stroke-width="2" stroke-miterlimit="10" cx="305.629" cy="556.525" r="16.051"></circle>
+                    </g>
+  
+  
+                    <g id="splitc" class="colortheory" transform="translate(-87,-178)" style="display: none;">
+                      <line fill="none" stroke="#221F1F" stroke-width="2" stroke-miterlimit="10" x1="314.431" y1="262.833" x2="377.988" y2="527.712"></line>
+                      <circle fill="none" stroke="#221F1F" stroke-width="2" stroke-miterlimit="10" cx="228.709" cy="543" r="16.051"></circle>
+                      <circle fill="none" stroke="#221F1F" stroke-width="2" stroke-miterlimit="10" cx="383.709" cy="543" r="16.051"></circle>
+                      <circle fill="none" stroke="#221F1F" stroke-width="2" stroke-miterlimit="10" cx="305.709" cy="249" r="16.051"></circle>
+                      <line fill="none" stroke="#221F1F" stroke-width="2" stroke-miterlimit="10" x1="235.431" y1="527.713" x2="298.988" y2="263.833"></line>
+                    </g>
+  
+                    <g id="analogous" class="colortheory" transform="translate(33,-109)" style="display: none;">
+                      <path fill="none" stroke="#221F1F" stroke-width="2" stroke-miterlimit="10" d="M331.945,393.713c7.16-15.791,11.772-32.979,13.336-51.041"></path>
+                      <path fill="none" stroke="#221F1F" stroke-width="2" stroke-miterlimit="10" d="M278.918,457.573c14.232-9.98,26.729-22.263,36.957-36.307"></path>
+                      <circle fill="none" stroke="#221F1F" stroke-width="2" stroke-miterlimit="10" cx="325.452" cy="408.348" r="16.072"></circle>
+                      <circle fill="none" stroke="#221F1F" stroke-width="2" stroke-miterlimit="10" cx="265.304" cy="466.355" r="16.072"></circle>
+                      <circle fill="none" stroke="#221F1F" stroke-width="2" stroke-miterlimit="10" cx="345.815" cy="326.656" r="16.072"></circle>
+                    </g>
+  
+                    <g id="triad" class="colortheory" transform="translate(-87,-216)" style="display: none;">
+                      <circle fill="none" stroke="#221F1F" stroke-width="2" stroke-miterlimit="10" cx="173.231" cy="511.139" r="16.051"></circle>
+                      <circle fill="none" stroke="#221F1F" stroke-width="2" stroke-miterlimit="10" cx="306.718" cy="281.703" r="16.051"></circle>
+                      <circle fill="none" stroke="#221F1F" stroke-width="2" stroke-miterlimit="10" cx="439.231" cy="508.139" r="16.051"></circle>
+                      <line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="298.51" y1="297.04" x2="183.5" y2="497.98"></line>
+                      <line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="428.717" y1="495.819" x2="313.365" y2="296.63"></line>
+                      <line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="189.199" y1="511.981" x2="423.839" y2="511.981"></line>
+                    </g>
+  
+                    <g id="square" class="colortheory" transform="translate(-87,-178)" style="display: none;">
+                      <path fill="none" d="M311.98,251.694c0.105-0.045,0.217-0.079,0.321-0.125l-6.348-6.348l-6.536,6.537
+                      c1.85,0.771,3.875,1.202,5.996,1.233c2.287-0.04,4.455-0.552,6.419-1.443L311.98,251.694z"></path>
+                      <path fill="none" stroke="#221F1F" stroke-width="2" stroke-miterlimit="10" d="M312.302,251.568c5.646-2.542,9.583-8.205,9.583-14.797
+                      c0-8.964-7.268-16.231-16.231-16.231s-16.23,7.268-16.23,16.231c0,6.754,4.127,12.541,9.995,14.986"></path>
+                      <path fill="none" stroke="#221F1F" stroke-width="2" stroke-miterlimit="10" d="M450.409,402.451c2.529,5.674,8.208,9.635,14.82,9.635
+                      c8.964,0,16.231-7.268,16.231-16.231s-7.268-16.231-16.231-16.231c-6.724,0-12.493,4.089-14.956,9.917"></path>
+                      <path fill="none" stroke="#221F1F" stroke-width="2" stroke-miterlimit="10" d="M299.96,540.912c-5.628,2.548-9.552,8.202-9.552,14.782
+                      c0,8.964,7.267,16.231,16.23,16.231s16.231-7.268,16.231-16.231c0-6.952-4.38-12.867-10.524-15.18"></path>
+                      <g>
+                        <path fill="none" d="M161.584,390.036c-0.037-0.112-0.066-0.228-0.107-0.338l-6.365,6.366l5.88,5.88
+                        c0.903-1.981,1.423-4.171,1.458-6.481c-0.033-1.86-0.385-3.64-0.992-5.297L161.584,390.036z"></path>
+                        <path fill="none" stroke="#221F1F" stroke-width="2" stroke-miterlimit="10" d="M161.477,389.698c-2.262-6.241-8.225-10.708-15.246-10.708
+                        c-8.964,0-16.23,7.268-16.23,16.231s7.267,16.231,16.23,16.231c6.562,0,12.203-3.903,14.761-9.509"></path>
+                        <path fill="none" stroke="#221F1F" stroke-width="2" stroke-miterlimit="10" d="M448.999,395.854c0-0.077,0.011-0.151,0.012-0.229
+                        c-0.002-0.079-0.014-0.156-0.014-0.235c-0.007-2.24,0.439-4.375,1.254-6.319L311.98,251.694c-1.947,0.828-4.078,1.309-6.327,1.309
+                        c-0.081,0-0.159-0.011-0.239-0.012c-0.076,0.001-0.148,0.013-0.225,0.013c-2.21,0.007-4.316-0.432-6.24-1.226L161.584,390.036
+                        c0.554,1.631,0.878,3.367,0.878,5.185c0,0.082-0.013,0.16-0.013,0.241c0,0.075,0.01,0.147,0.01,0.223
+                        c0.008,2.4-0.52,4.674-1.449,6.728l139.273,138.373c1.955-0.836,4.095-1.322,6.355-1.322c0.074,0,0.146,0.009,0.219,0.011
+                        c0.083-0.002,0.162-0.015,0.245-0.015c2.011-0.007,3.93,0.37,5.71,1.033l137.472-138.364
+                        C449.471,400.195,448.999,398.083,448.999,395.854z"></path>
+                        <path fill="none" d="M161.584,390.036l-0.127,0.129c0.607,1.657,0.959,3.437,0.992,5.297c0-0.081,0.013-0.16,0.013-0.241
+                        C162.462,393.403,162.138,391.667,161.584,390.036z"></path>
+                      </g>
+                      <path fill="none" d="M311.98,251.694l-0.147-0.146c-1.964,0.891-4.132,1.403-6.419,1.443c0.08,0.001,0.158,0.012,0.239,0.012
+                      C307.902,253.003,310.033,252.522,311.98,251.694z"></path>
+                    </g>
+  
+                    <circle id="bigcircle" cx="218" cy="218" r="220" fill="#000000" style="opacity: 0.01;"></circle>
+  
+                  </g>
+                <desc>Created with Snap</desc></svg>
+              </div>
+            </div><!-- end svg_layout -->
+          </div>
+          <div class="color_combinations" id="color_sq">
+            <div class="color_selectors"><div class="color_selector" data-col1="#F29089" data-col2="#3F7A63" data-col3="" data-col4="" style="transform: scale(1);"><a class="selector_link"><span class="cs colors_1" style="background:#F29089"></span><span class="cs colors_2" style="background:#3F7A63"></span></a><div class="author"></div></div><div class="color_selector" data-col1="#DB5F40" data-col2="#A8D49A" data-col3="" data-col4="" style="transform: scale(1);"><a class="selector_link"><span class="cs colors_1" style="background:#DB5F40"></span><span class="cs colors_2" style="background:#A8D49A"></span></a><div class="author"></div></div><div class="color_selector" data-col1="#E07860" data-col2="#78D1AD" data-col3="" data-col4="" style="transform: scale(1);"><a class="selector_link"><span class="cs colors_1" style="background:#E07860"></span><span class="cs colors_2" style="background:#78D1AD"></span></a><div class="author"></div></div><div class="color_selector" data-col1="#E05451" data-col2="#90C98B" data-col3="" data-col4="" style="transform: scale(1);"><a class="selector_link"><span class="cs colors_1" style="background:#E05451"></span><span class="cs colors_2" style="background:#90C98B"></span></a><div class="author"></div></div><div class="color_selector" data-col1="#DB5F40" data-col2="#7DBEAF" data-col3="" data-col4="" style="transform: scale(1);"><a class="selector_link"><span class="cs colors_1" style="background:#DB5F40"></span><span class="cs colors_2" style="background:#7DBEAF"></span></a><span class="author_dot"><span class="dot"></span></span><div class="author">by <a class="author_link" target="_blank" href="http://www.lianajegers.com/">Liana Jegers</a></div></div><div class="color_selector" data-col1="#E25150" data-col2="#B4DABB" data-col3="" data-col4="" style="transform: scale(1);"><a class="selector_link"><span class="cs colors_1" style="background:#E25150"></span><span class="cs colors_2" style="background:#B4DABB"></span></a><div class="author"></div></div><div class="color_selector" data-col1="#DA4F2C" data-col2="#6FC2A0" data-col3="" data-col4="" style="transform: scale(1);"><a class="selector_link"><span class="cs colors_1" style="background:#DA4F2C"></span><span class="cs colors_2" style="background:#6FC2A0"></span></a><div class="author"></div></div><div class="color_selector" data-col1="#E25150" data-col2="#70B994" data-col3="" data-col4="" style="transform: scale(1);"><a class="selector_link"><span class="cs colors_1" style="background:#E25150"></span><span class="cs colors_2" style="background:#70B994"></span></a><div class="author"></div></div><div class="color_selector" data-col1="#DE480E" data-col2="#70C2BB" data-col3="" data-col4="" style="transform: scale(1);"><a class="selector_link"><span class="cs colors_1" style="background:#DE480E"></span><span class="cs colors_2" style="background:#70C2BB"></span></a><div class="author"></div></div><div class="color_selector" data-col1="#DE3A28" data-col2="#6FBE7B" data-col3="" data-col4="" style="transform: scale(1);"><a class="selector_link"><span class="cs colors_1" style="background:#DE3A28"></span><span class="cs colors_2" style="background:#6FBE7B"></span></a><div class="author"></div></div><div class="color_selector" data-col1="#DC4518" data-col2="#5CBA96" data-col3="" data-col4="" style="transform: scale(1);"><a class="selector_link"><span class="cs colors_1" style="background:#DC4518"></span><span class="cs colors_2" style="background:#5CBA96"></span></a><span class="author_dot"><span class="dot"></span></span><div class="author">by <a class="author_link" target="_blank" href="http://anastiia.myportfolio.com/">Anastasiia Andriichuk</a></div></div><div class="color_selector" data-col1="#DB400B" data-col2="#60AF42" data-col3="" data-col4="" style="transform: scale(1);"><a class="selector_link"><span class="cs colors_1" style="background:#DB400B"></span><span class="cs colors_2" style="background:#60AF42"></span></a><div class="author"></div></div><div class="color_selector" data-col1="#DC2B14" data-col2="#5EB63A" data-col3="" data-col4="" style="transform: scale(1);"><a class="selector_link"><span class="cs colors_1" style="background:#DC2B14"></span><span class="cs colors_2" style="background:#5EB63A"></span></a><div class="author"></div></div><div class="color_selector" data-col1="#E2460E" data-col2="#99CD2C" data-col3="" data-col4="" style="transform: scale(1);"><a class="selector_link"><span class="cs colors_1" style="background:#E2460E"></span><span class="cs colors_2" style="background:#99CD2C"></span></a><span class="author_dot"><span class="dot"></span></span><div class="author">by <a class="author_link" target="_blank" href="http://anastiia.myportfolio.com/">Anastasiia Andriichuk</a></div></div><div class="color_selector" data-col1="#CB291A" data-col2="#49B48E" data-col3="" data-col4="" style="transform: scale(1);"><a class="selector_link"><span class="cs colors_1" style="background:#CB291A"></span><span class="cs colors_2" style="background:#49B48E"></span></a><div class="author"></div></div><div class="color_selector" data-col1="#DC2B14" data-col2="#95CA7A" data-col3="" data-col4="" style="transform: scale(1);"><a class="selector_link"><span class="cs colors_1" style="background:#DC2B14"></span><span class="cs colors_2" style="background:#95CA7A"></span></a><div class="author"></div></div><div class="color_selector" data-col1="#AE2519" data-col2="#4AB469" data-col3="" data-col4="" style="transform: scale(1);"><a class="selector_link"><span class="cs colors_1" style="background:#AE2519"></span><span class="cs colors_2" style="background:#4AB469"></span></a><span class="author_dot"><span class="dot"></span></span><div class="author">by <a class="author_link" target="_blank" href="http://www.wallacedsgn.com/">Dustin Wallace</a></div></div><div class="color_selector" data-col1="#DC2A14" data-col2="#4CB584" data-col3="" data-col4="" style="transform: scale(1);"><a class="selector_link"><span class="cs colors_1" style="background:#DC2A14"></span><span class="cs colors_2" style="background:#4CB584"></span></a><span class="author_dot"><span class="dot"></span></span><div class="author">by <a class="author_link" target="_blank" href="http://www.kylemillercreative.com/">Kyle Miller</a></div></div><div class="color_selector" data-col1="#9F2218" data-col2="#48B37E" data-col3="" data-col4="" style="transform: scale(1);"><a class="selector_link"><span class="cs colors_1" style="background:#9F2218"></span><span class="cs colors_2" style="background:#48B37E"></span></a><div class="author"></div></div><div class="color_selector" data-col1="#B32208" data-col2="#4BB33E" data-col3="" data-col4="" style="transform: scale(1);"><a class="selector_link"><span class="cs colors_1" style="background:#B32208"></span><span class="cs colors_2" style="background:#4BB33E"></span></a><div class="author"></div></div></div>
+            <div class="color_sqg">
+                      <div class="flushright">
+              <div class="sq1 btn-square colors_1" data-color="#F29089" style="background-color: rgb(242, 144, 137); width: 29%;"></div>
+              <div class="sq2 btn-square colors_2" data-color="#3F7A63" style="background-color: rgb(63, 122, 99); width: 29%;"></div>
+              <div class="sq3 btn-square colors_3" data-color="" style="display: none; width: 29%;"></div>
+              <div class="sq4 btn-square colors_4" data-color="" style="display: none; width: 29%;"></div>
+                          </div>
+              <p id="designer" style="display: none;"></p>
+            </div>
+          </div> <!-- end color_sq -->				
+        </div>
+        <div class="">
+          <div class="object_sq">  <!-- 1 badges -->
+            <div class="half">
+              <object width="185" height="185" id="b1_4c" data="./assets/badge1_4colors.svg" type="image/svg+xml"></object>
+              <object width="185" height="185" id="b2_4c" data="./assets/badge2_4colors.svg" type="image/svg+xml"></object>
+            </div>
+            <div class="half">
+              <object width="185" height="186" id="b3_4c" data="./assets/badge3_4colors.svg" type="image/svg+xml"></object>
+              <object width="185" height="186" id="b4_4c" data="./assets/badge4_4colors.svg" type="image/svg+xml"></object>
+            </div>
+            <div class="clear" style="clear:both;"></div>
+          </div>
+          <div class="triangles"> <!-- 2 triangles -->
+            <object id="triangle_svg" width="840" height="118" data="./assets/triangles.svg" type="image/svg+xml"></object>
+          </div>
+  
+          <div class="bottom_sq"> <!-- 3 hex squares -->
+            <div class="color_squares">
+              <div class="bottom-square colors_1">
+                <div class="sq1" style="background-color: rgb(242, 144, 137);"></div>
+                <p id="sq1">#F29089</p>
+              </div>
+              <div class="bottom-square colors_2">
+                <div class="sq2" style="background-color: rgb(63, 122, 99);"></div>
+                <p id="sq2">#3F7A63</p>
+              </div>
+              <div class="bottom-square colors_3">
+                <div class="sq3" style=""></div>
+                <p id="sq3"></p>
+              </div>
+              <div class="bottom-square colors_4">
+                <div class="sq4" style=""></div>
+                <p id="sq4"></p>
+              </div>
+            </div>
+          </div>
+  
+  
+          <div class="gradients"> <!-- 5  gradient circles -->
+            <div class="gradient_circles">							<!-- order -->
+              <div class="gradient_circle gc1 " style="background: linear-gradient(rgb(242, 144, 137) 0%, rgb(63, 122, 99) 95%);"></div>	<!-- 1 - 2 -->
+              <div class="gradient_circle gc2 " style="background: linear-gradient(rgb(242, 144, 137) 0%, rgb(255, 255, 255) 75%);"></div>	<!-- 1 - 3 -->
+              <div class="gradient_circle gc4 " style="background: linear-gradient(rgb(63, 122, 99) 0%, rgb(255, 255, 255) 75%);"></div>	<!-- 2 - 3 -->
+              <div class="gradient_circle gc3 " style="background: linear-gradient(rgb(242, 144, 137) 0%, rgb(0, 0, 0) 75%);"></div>	<!-- 1 - 4 -->
+              <div class="gradient_circle gc5 " style="background: linear-gradient(rgb(63, 122, 99) 0%, rgb(0, 0, 0) 75%);"></div>	<!-- 2 - 4 -->
+              <div class="gradient_circle gc6 " style="background: rgb(243, 241, 241);"></div>	<!-- 3 - 4 -->
+            </div>
+            <div class="gradient_squares_wrapper"> <!-- 6  gradient squares -->
+              <div class="gradient_squares">
+                <div class="gradient_square gs1 colors_3" style="background: linear-gradient(rgb(242, 144, 137) 0%, rgb(255, 255, 255) 90%);"></div>
+                <div class="gradient_square gs2 colors_3" style="background: linear-gradient(rgb(63, 122, 99) 0%, rgb(255, 255, 255) 90%);"></div>
+                <div class="gradient_square gs3 colors_3" style="background: rgb(243, 241, 241);"></div>
+                <div class="gradient_square gs4 colors_3" style="background: rgb(243, 241, 241);"></div>
+              </div>
+              <div class="gradient_squares">
+                <div class="gradient_square gs5 colors_3" style="background: linear-gradient(rgb(242, 144, 137) 0%, rgb(0, 0, 0) 90%);"></div>
+                <div class="gradient_square gs6 colors_3" style="background: linear-gradient(rgb(63, 122, 99) 0%, rgb(0, 0, 0) 90%);"></div>
+                <div class="gradient_square gs7 colors_3" style="background: rgb(243, 241, 241);"></div>
+                <div class="gradient_square gs8 colors_3" style="background: rgb(243, 241, 241);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+</body>
+</html>
