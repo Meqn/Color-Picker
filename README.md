@@ -13,3 +13,9 @@
 🔗 [点击此处快速进入](https://mengqing.org/app/colorPicker/)
 
 ---
+
+
+![color picker](./screenShot/color-picker-01.png)
+
+![color picker](./screenShot/color-picker-02.png)
+
